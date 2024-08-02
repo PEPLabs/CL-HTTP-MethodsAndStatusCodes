@@ -1,6 +1,9 @@
 import io.javalin.Javalin;
 import io.javalin.http.Context;
 
+
+/* Please refer to the README file for detailed instructions on creating the lab */
+
 public class Main {
      
     public static Javalin getInstance() { 
