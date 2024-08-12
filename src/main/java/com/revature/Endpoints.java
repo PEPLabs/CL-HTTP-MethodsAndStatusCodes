@@ -59,8 +59,7 @@ public class Endpoints {
      * @param ctx - The Javalin Context object containing information about the HTTP
      *            request and response.
      */
-    // TODO: create the POST endpoint's related handler based off of its above
-    // description
+    // TODO: create the POST endpoint's related handler based off of its above description
 
     /**
      * The handlePutRequest method handles PUT requests to the "/put-request" path.
@@ -71,8 +70,7 @@ public class Endpoints {
      * @param ctx - The Javalin Context object containing information about the HTTP
      *            request and response.
      */
-    // TODO: create the PUT endpoint's related handler based off of its above
-    // description
+    // TODO: create the PUT endpoint's related handler based off of its above description
 
     /**
      * The handleDeleteRequest method handles DELETE requests to the
@@ -84,8 +82,7 @@ public class Endpoints {
      * @param ctx - The Javalin Context object containing information about the HTTP
      *            request and response.
      */
-    // TODO: create the DELETE endpoint's related handler based off of its above
-    // description
+    // TODO: create the DELETE endpoint's related handler based off of its above description
 
     /**
      * The handlePatchRequest method handles PATCH requests to the "/patch-request"
@@ -97,6 +94,5 @@ public class Endpoints {
      * @param ctx - The Javalin Context object containing information about the HTTP
      *            request and response.
      */
-    // TODO: create the PATCH endpoint's related handler based off of its above
-    // description
+    // TODO: create the PATCH endpoint's related handler based off of its above description
 }
