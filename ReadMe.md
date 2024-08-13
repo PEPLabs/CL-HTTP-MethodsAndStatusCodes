@@ -1,101 +1,33 @@
-Status codes are how we tell the client machine how successful the HTTP Request was. HTTP Responses have 5 main categories of status codes:
+# Methods and Status Codes Lab
 
-There are 5 categories of status code responses:
+# Description
+In this lab we have the incomplete `getJavalinInstance()` method that creates a Javalin object, sets up an endpoint, and returns the Javalin object. Your goal is to finish the method by setting up its remaining endpoints as well as their associated handlers.
 
-* 100: Request was informational
-* 200: Request was successful
-* 300: Request is being redirected
-* 400: Request failed due to a client-side error
-* 500: Request failed due to a server-side error
+An example of an endpoint and a handler are provided in the code.
 
-CREATE ENDPOINTS FOR GET, POST, PUT, DELETE, PATCH:
+# Completing the Lab
+You will be editing the file `Endpoints.java`. It can be found under the `src/main/java/com/revature` package.
 
-    Define GET endpoint:
+Review the file's code and code comments. Look for TODO comments: these comments represent the tasks you need to perform to complete the lab. You can find a list of the TODOs in VSCode's Problems pane. To open up the Problems pane, go to View > Problems or use the shortcut "Ctrl + Shift + M" (or "Command + Shift + M" on Mac). We suggest you remove the TODOs as you complete them.
 
-    Method: app.get(path, handler)
-    Description:
-        This method registers a handler to respond to HTTP GET requests at the specified path.
+Tasks to Complete:
+- [ ] Create the POST endpoint to the "/post-request" path and associate it with the handler method you will create named handlePostRequest
+- [ ] Create the PUT endpoint to the "/put-request" path and associate it with the handler method you will create named handlePutRequest
+- [ ] Create the DELETE endpoint to the "/delete-request" path and associate it with the handler method you will create named handleDeleteRequest
+- [ ] Create the PATCH endpoint to the "/patch-request" path and associate it with the handler method you will create named handlePatchRequest
+- [ ] Create the POST endpoint's related handler based off of its description
+- [ ] Create the PUT endpoint's related handler based off of its description
+- [ ] Create the DELETE endpoint's related handler based off of its description
+- [ ] Create the PATCH endpoint's related handler based off of its description
 
-    Parameters:
-        path (String): The URL path at which the handler will respond to GET requests.
-        handler (HandlerFunction): The handler function or method reference that will process the 
-                                   GET requests.
+# Running Tests
+- To run the tests, click on the `test beaker` icon and run the test cases. Please ensure that you do not already have the program running.
+- You can optionally run the program for manual testing. Once the program is running, you can create a new terminal and execute the commands mentioned in the `Main.java` file.
 
-        app.get("/get-request", Main::handleGetRequest);
+You can create a new terminal using the button found in the bottom pane:
+![new terminal button](/images/new-terminal.png)
 
-        Notes:
-            The "handleGetRequest" method should contain the logic to process the GET request and return an appropriate response.
+Below is an example of manually testing using commands in the terminal:
+![example manual testing image](/images/manual-testing-example.png)
 
-Similary, 
-
-* Create endpoint for POST request in getInstance() method: 
-    - Use the app.post() method, and pass the path as "/post-request".
-    - For the Handler, create a method reference that contains the logic to process the POST 
-      request and return an appropriate response.
-
-* Create endpoint for PUT request in getInstance() method: 
-    - Use the app.put() method, and pass the path as "/put-request".
-    - For the Handler, create a method reference that contains the logic to process the PUT 
-      request and return an appropriate response.
-
-* Create endpoint for DELETE request in getInstance() method: 
-    - Use the app.delete() method, and pass the path as "/delete-request".
-    - For the Handler, create a method reference that contains the logic to process the DELETE 
-      request and return an appropriate response.
-
-* Create endpoint for PATCH request in getInstance() method: 
-    - Use the app.patch() method, and pass the path as "/patch-request".
-    - For the Handler, create a method reference that contains the logic to process the PATCH 
-      request and return an appropriate response.
-
-
-CREATE HANDLER METHODS FOR THE ENDPOINTS:
-
-    Handler method for GET request: (handleGetRequest)
-
-        private static void handleGetRequest(Context ctx) {
-            
-        }
-
-    Function: ctx.result(message)
-    Description:
-        This function is used to set the result of a GET request endpoint to the specified message.
-       
-         private static void handleGetRequest(Context ctx) {
-            ctx.result(message);
-         }
-
-    Parameters:
-        message (string): The message to be set as the result of the GET request endpoint.          
-                          Pass the message as "GET request endpoint".
-
-        private static void handleGetRequest(Context ctx) {
-            ctx.result("GET request endpoint");
-         }
-
-    Status Code:
-    Description:
-        This method sets the HTTP response status code to the specified code.
-
-    Parameters:
-        code (int): The HTTP status code to set for the response. Pass the "202 status code"      
-                    indicating the request was ACCEPTED. 
-
-Similarly, 
-
-* Create handler method for POST request (handlePostRequest): 
-    - Use ctx.result(message) to set the result by passing the message as "POST request endpoint".
-    - Set the "201 status code" indicating the request was CREATED.
-
-* Create handler method for PUT request (handlePutRequest):  
-    - Use ctx.result(message) to set the result by passing the message as "PUT request endpoint".
-    - Set the "201 status code" indicating the request was CREATED.
-
-* Create handler method for DELETE request (handleDeleteRequest):  
-    - Use ctx.result(message) to set the result by passing the message as "DELETE request endpoint".
-    - Set the "200 status code" indicating the request was SUCCESS.
-   
-* Create handler method for PATCH request (handlePatchRequest):  
-    - Use ctx.result(message) to set the result by passing the message as "PATCH request endpoint".
-    - Set the "201 status code" indicating the request was CREATED.
-
+Note: To see the above image(s), please open this file in Preview mode by using the `Ctrl + Shift + V` shortcut (`Command + Shift + V` on Mac)
